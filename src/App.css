@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
+.form-container {
+  background-color: #E1E1E6;
+  width: 100vw;
+  height: 100vh;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 800px;
+  height: 600px;
+
+  display: flex;
+  align-items: center;
   flex-direction: column;
+}
+.form-content h1 {
+  margin-top: 100px;
+  margin-bottom: 130px;
+  font-size: 48px;
+}
+
+.form-content form  {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.form-content form label {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-content form label input {
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 6px;
+  padding: 30px 20px;
+  border: 1px solid #50505090;
+  font-size: 24px;
+  outline: 0;
 }
+
+.form-content form label input.valid-input {
+  border: 1px solid green;
+  outline: 2px solid green;
+}
+
+.form-content form label input.invalid-input {
+  border: 1px solid red;
+  outline: 2px solid red;
+
+}
+
+  .form-content form button {
+    position: fixed;
+    top: 575px;
+    left: 1135px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #50505090;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 20px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+  }
+
+  .form-content form button:hover {
+    background-color: #505050;
+    color: #fff;
+  }
+
+  .form-content form button.position-right {
+    transition: 0.2s all ease-in-out;
+    top: 575px;
+    left: 845px;
+  }
